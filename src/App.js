@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaInstagram } from 'react-icons/fa';
+import { AiFillInstagram } from 'react-icons/ai';
 
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
     setShowHearts(true);
   };
 
-  const handleNoMouseEnter = () => {
+  const handleNoButtonClick = () => {
     const randomTop = Math.floor(Math.random() * window.innerHeight);
     const randomLeft = Math.floor(Math.random() * window.innerWidth);
     setNoButtonPosition({
@@ -114,7 +114,6 @@ function App() {
     padding: '10px 20px',
     borderRadius: '5px',
     cursor: 'pointer',
-    marginBottom: '10px',
     ...noButtonPosition,
     transition: 'top 0.3s ease, left 0.3s ease',
   };
@@ -127,12 +126,11 @@ function App() {
   };
 
   const footerStyle = {
-  marginTop: '150px', // Ajuste a distância conforme necessário
-  color: '#FFFFFF',
-  fontSize: '17px',
-  textAlign: 'center',
-};
-
+    marginTop: '40px', // Ajuste a distância conforme necessário
+    color: '#FFFFFF',
+    fontSize: '14px',
+    textAlign: 'center',
+  };
 
   const creatorStyle = {
     fontWeight: 'bold',
@@ -144,7 +142,6 @@ function App() {
     textDecoration: 'none',
     fontSize: '20px', // Ajuste o tamanho do ícone conforme necessário
   };
-  
 
   return (
     <div className="App" style={appStyle}>
@@ -175,25 +172,27 @@ function App() {
             <button style={buttonStyle} onClick={handleYesClick}>
               SIM
             </button>
-            <button style={noButtonStyle} onMouseEnter={handleNoMouseEnter}>
+            <button
+              style={noButtonStyle}
+              onMouseEnter={handleNoButtonClick}
+              onClick={handleNoButtonClick} // Adicione esse evento de clique
+            >
               NÃO
             </button>
           </div>
         )}
       </div>
-
-     <footer style={footerStyle}>
-  Criado por <span style={creatorStyle}>João Medeiros</span>
-  <a
-    href="https://www.instagram.com/joaoo_medeiroos/"
-    target="_blank"
-    rel="noopener noreferrer"
-    style={instagramStyle}
-  >
-    <FaInstagram /> {/* Adicionando o ícone do Instagram */}
-  </a>
-</footer>
-
+      <footer style={footerStyle}>
+        Criado por <span style={creatorStyle}>João Medeiros</span>
+        <a
+          href="https://www.instagram.com/joaoo_medeiroos/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={instagramStyle}
+        >
+          <AiFillInstagram /> {/* Ícone do Instagram */}
+        </a>
+      </footer>
     </div>
   );
 }
