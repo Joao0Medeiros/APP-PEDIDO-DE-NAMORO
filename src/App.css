@@ -1,0 +1,78 @@
+.App {
+    /* Estilos gerais do aplicativo */
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #FFDAB9;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  h1 {
+    /* Estilos do título */
+    color: #FF1493;
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  p {
+    /* Estilos da mensagem de parabéns */
+    color: #FF1493;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .button-container {
+    /* Estilos do container dos botões */
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .button {
+    /* Estilos dos botões */
+    background-color: #FF1493;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .no-button {
+    /* Estilos do botão "NÃO" */
+    position: absolute;
+    background-color: #FF1493;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: top 0.3s ease, left 0.3s ease;
+  }
+  
+  .heart {
+    /* Estilos dos corações */
+    position: absolute;
+    font-size: 24px;
+    transform-origin: center;
+    animation: float 3s linear infinite;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
