@@ -185,7 +185,7 @@ function App() {
       <footer style={footerStyle}>
         Criado por <span style={creatorStyle}>João Medeiros</span>
         <a
-          href="https://www.instagram.com/joaoo_medeiroos/"
+          href="https://www.instagram.com/juao.med/"
           target="_blank"
           rel="noopener noreferrer"
           style={instagramStyle}
